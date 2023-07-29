@@ -55,3 +55,39 @@ Think of a way you can expel students without just hiding those divs on the page
 - House Colors: The color of the student's card changes depending on which house they were sorted.
 - Card Sorting/Ordering: Sort the student cards by some criteria (i.e. alphabetically by name, by house)
 
+# 💮 PLANNING 💮 
+> STEP ONE - Annotation: Read over technical requirements and annotate them. 
+
+💮  Translate technical requirements into code needs.
+💮  Look at mock-up and examin for HTML structure. 
+
+HTML Structure 
+> Header and paragraph section
+
+> Form to sort students
+
+> Filter buttons to show which students are in which houses. 
+
+> Rendered array of student cards, what houses they're in, and an expel button. 
+
+> Expelled array that shows students that are expelled. This project's version of delete. 
+
+Technical Requirements 
+KEY: 
+- ♦️ Convert into an issue. 
+- 📝 Informational. Discoveries. 
+
+
+> 📝 I did not know how much went into project planning until now. I vastly underestimated it, and even now, I feel like I'm only getting slight exposure to it. 
+
+> 📝 The structure needs to be motivated. The order in which I tackle these issues needs to make some sense. It's like how the main.js file tells the story of execution. 
+
+> ♦️ Compartmentalization. ♦️ "Your JS file should be comprised of functions, no actions should happen in your code outside of a function except for your initial `startApp()` function". You will need an eventListener function, a rednerOnDom function, and organize the rendering of HTML within the main.js file.
+
+> ♦️ Array of Objects Creation ♦️ Create the structure of the objects within the array that will be rendered as cards to the DOM. Create a test set with the needed properties and values. You also need to create test data to make sure the filters are working properly. 
+
+> ♦️ Form Submission Required ♦️ Make sure that the form submission, when creating the HTML, displays an error that requests for you to submit a value. Make the input required. 
+
+> ♦️ Creating HTML Structure and Rendering Dynamically ♦️ A BIG FAT ISSUE TICKET. We need to create the skeleton of the HTML before adding event listeners and following through with compartmentalization.   
+
+> ♦️ Creating event listeners ♦️ Another BIG FAT ISSUE TICKET. Aftter the creation of the HTML structure and the rendering of the buttons, we need to give those buttons functionality using the .filter() function to sort which students are located in which house.
