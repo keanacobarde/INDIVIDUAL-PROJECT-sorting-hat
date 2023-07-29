@@ -77,10 +77,13 @@ KEY:
 - ♦️ Convert into an issue. 
 - 📝 Informational. Discoveries. 
 
+# 📝 INFORMATIONAL ASIDES AND DISCOVERY 📝
 
 > 📝 I did not know how much went into project planning until now. I vastly underestimated it, and even now, I feel like I'm only getting slight exposure to it. 
 
-> 📝 The structure needs to be motivated. The order in which I tackle these issues needs to make some sense. It's like how the main.js file tells the story of execution. 
+> 📝 The structure needs to be motivated. The order in which I tackle these issues needs to make some sense. It's like how the main.js file tells the story of execution. What does the user see first? What do they need to interact with first? I need to use these facts to give my structure motive. 
+
+# ♦️ ISSUE TICKETS NEEDED FOR CREATION ♦️
 
 > ♦️ Compartmentalization. ♦️ "Your JS file should be comprised of functions, no actions should happen in your code outside of a function except for your initial `startApp()` function". You will need an eventListener function, a rednerOnDom function, and organize the rendering of HTML within the main.js file.
 
