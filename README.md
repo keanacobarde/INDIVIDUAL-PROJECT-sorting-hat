@@ -55,3 +55,49 @@ Think of a way you can expel students without just hiding those divs on the page
 - House Colors: The color of the student's card changes depending on which house they were sorted.
 - Card Sorting/Ordering: Sort the student cards by some criteria (i.e. alphabetically by name, by house)
 
+# 💮 PLANNING 💮 
+> STEP ONE - Annotation: Read over technical requirements and annotate them. 
+
+💮  Translate technical requirements into code needs.
+💮  Look at mock-up and examin for HTML structure. 
+
+HTML Structure 
+> Header and paragraph section
+
+> Form to sort students
+
+> Filter buttons to show which students are in which houses. 
+
+> Rendered array of student cards, what houses they're in, and an expel button. 
+
+> Expelled array that shows students that are expelled. This project's version of delete. 
+
+# 💮 Technical Requirements 💮
+
+KEY: 
+- ♦️ Convert into an issue. 
+- 📝 Informational. Discoveries. 
+
+# 📝 INFORMATIONAL ASIDES AND DISCOVERY 📝
+
+> 📝 I did not know how much went into project planning until now. I vastly underestimated it, and even now, I feel like I'm only getting slight exposure to it. 
+
+> 📝 The structure needs to be motivated. The order in which I tackle these issues needs to make some sense. It's like how the main.js file tells the story of execution. What does the user see first? What do they need to interact with first? I need to use these facts to give my structure motive. 
+
+> 📝 Reach Goal - To segment the files as needed when more assets are introduced. I want to get the main functionality, MVP done as soon as possible so that I can introduce more complex styling.  
+
+# ♦️ ISSUE TICKETS NEEDED FOR CREATION ♦️
+
+> ♦️ Creating HTML Structure and Rendering Dynamically ♦️ A BIG FAT ISSUE TICKET. We need to create the skeleton of the HTML before adding event listeners and following through with compartmentalization. Bootstrap assets are needed to be imported, HTML structure needs to be laid out and decided and divIds need to be chosen. Be descriptive and clear with naming conventions. This will most likely be the first BIG issue ticket.  
+
+> ♦️ Compartmentalization. ♦️ "Your JS file should be comprised of functions, no actions should happen in your code outside of a function except for your initial `startApp()` function". You will need an eventListener function, a rednerOnDom function, and organize the rendering of HTML within the main.js file. AKA, JavaScript organization. A good second issue to be completed alongside the HTML Structuring. 
+
+> ♦️ Array of Objects Creation ♦️ Create the structure of the objects within the array that will be rendered as cards to the DOM. Create a test set with the needed properties and values. You also need to create test data to make sure the filters are working properly. 
+
+> ♦️ Form Submission Required ♦️ Make sure that the form submission, when creating the HTML, displays an error that requests for you to submit a value. Make the input required. 
+
+> ♦️ Creating event listeners ♦️ Another BIG FAT ISSUE TICKET. After the creation of the HTML structure and the rendering of the buttons, we need to give those buttons functionality using the .filter() function to sort which students are located in which house.
+
+> ♦️ Creating the D in CRUD ♦️ Alongside the eventListener, I need a seperate issue ticket dedciated to just the 'expulsion' of students to the darkside. Rather than just a splice, it's more like a push and splice? This is different from the typical deletion we've seen so far and will need a different approach. 
+
+>  ♦️ MVP CSS STYLING ♦️ The minimum amount of CSS styling needed to be readable and to not drive me absolutely insane. Do not mistake this for the final product! As soon as it's good enough, we're closing this ticket. 
