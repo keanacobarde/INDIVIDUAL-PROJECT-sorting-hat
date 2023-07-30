@@ -1,3 +1,7 @@
+body {
+  background-color: blanchedalmond;
+}
+
 .logo_heading {
   font-size: large;
   text-align: center;
@@ -8,4 +12,20 @@
   font-size: medium;
   text-align: center;
   padding: 10px;
+}
+
+.studentform {
+  display:flex;  
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.filterbuttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.array_container {
+  display: flex;
+  margin: 40px; 
 }
