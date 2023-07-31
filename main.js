@@ -113,7 +113,12 @@ if (e.target.id.includes('expel')) {
   //Finding Index of Student
 const [ , studentIdDel] = e.target.id.split('--')
 const index = students.findIndex(student => student.studentId == studentIdDel); 
-console.log(index); 
+console.log(index, typeof(index)); 
+  //Expulsion Functionality
+expelledStudents.push(students[index]);
+students.splice(index, 1);
+cardsOnDom(students);
+cardsOnDomExpelled(expelledStudents);  
 }
 }) 
 }
