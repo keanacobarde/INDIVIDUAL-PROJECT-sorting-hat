@@ -108,16 +108,14 @@ document.querySelector("#filterbtnid").addEventListener('click', (e) => {
 })
 
 //Buttons on Cards - Expel 
-document.querySelector(".array_container").addEventListener('click', (e) => {
-  if (e.target.id.includes('expel')) {
-  const [ , studentToDel] = e.target.id.split('--'); 
-  expelledStudents.push(students[parseInt(studentToDel) - 1]);
-  students.splice(parseInt(studentToDel) - 1, 1);
-  cardsOnDom(students);
-  cardsOnDomExpelled(expelledStudents);    
-  }
-}); 
-
+document.querySelector("#studentsid").addEventListener('click', (e) => {
+if (e.target.id.includes('expel')) {
+  //Finding Index of Student
+const [ , studentIdDel] = e.target.id.split('--')
+const index = students.findIndex(student => student.studentId == studentIdDel); 
+console.log(index); 
+}
+}) 
 }
 
 // *********  FUNCTION TO START APPLICATION  *********  //
