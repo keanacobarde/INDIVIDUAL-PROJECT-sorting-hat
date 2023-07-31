@@ -44,7 +44,6 @@ const form = `<form><div class="input-group mb-3"><input type="text" class="form
 renderToDom("#formid", form);
 
 const filterBtns = `<button type="button" class="btn btn-outline-dark" id="all">All</button><button type="button" class="btn btn-outline-danger" id="gryf">Gryffindor</button><button type="button" class="btn btn-outline-success" id="sly">Slytherin</button><button type="button" class="btn btn-outline-primary"id="rave">Ravenclaw</button><button type="button" class="btn btn-outline-info"id="huff">Hufflepuff</button>`
-renderToDom("#filterbtnid", filterBtns);
 
 //Rendering Student Cards
 const cardsOnDom = (array) => {
@@ -59,7 +58,7 @@ domString += `<div class="card mb-3" style="max-width: 500px;">
     <div class="card-body">
       <h5 class="card-title">${student.name}</h5>
       <p class="card-text">${student.house}</p>
-      <p class="card-text"><small class="text-body-secondary"><button type="button" class="btn btn-outline-danger">Expel</button></small></p>
+      <p class="card-text"><small class="text-body-secondary"><button type="button" class="btn btn-outline-danger" id='expel--${student.studentId}'>Expel</button></small></p>
     </div>
   </div>
 </div>
@@ -86,8 +85,17 @@ document.querySelector("#filterbtnid").addEventListener('click', (e) => {
   }
 })
 
+//Buttons on Cards - Expel 
+document.querySelector("#studentsid").addEventListener('click', (e) => {
+  if (e.target.id.includes('expel')) {
+  const [ , studentToDel] = e.target.id.split('--'); 
+  console.log(studentToDel);
+  }
+}); 
+
 }
 
 // *********  FUNCTION TO START APPLICATION  *********  //
-cardsOnDom(students); 
+renderToDom("#filterbtnid", filterBtns); 
+cardsOnDom(students);
 eventListeners(); 
