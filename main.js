@@ -14,7 +14,7 @@ const students = [
   { 
   studentId: 3,
   name: "Draco Malfoy", 
-  house: "Slythirin", 
+  house: "Slytherin", 
   },
   { 
   studentId: 4,
@@ -39,7 +39,7 @@ const renderToDom = (divId, html) => {
 }
 
 // *********  HTML COMPONENTS  ********* //
-const form = `<form><div class="input-group mb-3"><input type="text" class="form-control student-input" placeholder="Luna Lovegood" aria-label="Recipient's username" aria-describedby="button-addon2">
+const form = `<form id="studentForm"><div class="input-group mb-3"><input type="text" class="form-control student-input" placeholder="Luna Lovegood" aria-label="Recipient's username" aria-describedby="button-addon2" id="newName">
 <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Sort!</button></div></form>`
 renderToDom("#formid", form);
 
@@ -90,6 +90,13 @@ const cardsOnDomExpelled = (array) => {
  } 
 
 // *********  EVENT LISTENERS  *********  //
+//Event Listener Associated Function - House Randomizer 
+
+const houseRandom = () => {
+const houses = ["Gryffindor", "Slytherin", "Ravenclaw", "Hufflepuff"];
+return houses[Math.floor(Math.random() * 4)]; 
+}
+
 const eventListeners = () => {
 //FILTER BUTTONS 
 document.querySelector("#filterbtnid").addEventListener('click', (e) => {
@@ -99,7 +106,7 @@ document.querySelector("#filterbtnid").addEventListener('click', (e) => {
   } else if (e.target.id == "gryf") {
     cardsOnDom(students.filter(student => student.house === "Gryffindor"));
   } else if (e.target.id == "sly") {
-    cardsOnDom(students.filter(student => student.house === "Slythirin"));
+    cardsOnDom(students.filter(student => student.house === "Slytherin"));
   } else if (e.target.id == "rave") {
     cardsOnDom(students.filter(student => student.house === "Ravenclaw"));   
   } else if (e.target.id == "huff") {
@@ -120,7 +127,20 @@ students.splice(index, 1);
 cardsOnDom(students);
 cardsOnDomExpelled(expelledStudents);  
 }
-}) 
+})
+
+//Form Submission Buttons
+document.querySelector("#formid").addEventListener('submit', (e) => {
+  e.preventDefault(); 
+const newStudent = {
+  studentId: students.length + 1,
+  name: document.querySelector("#newName").value,
+  house: houseRandom()
+}
+students.push(newStudent);
+cardsOnDom(students); 
+})
+
 }
 
 // *********  FUNCTION TO START APPLICATION  *********  //
