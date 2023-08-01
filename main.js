@@ -39,9 +39,8 @@ const renderToDom = (divId, html) => {
 }
 
 // *********  HTML COMPONENTS  ********* //
-const form = `<form id="studentForm"><div class="input-group mb-3"><input type="text" class="form-control student-input" placeholder="Luna Lovegood" aria-label="Recipient's username" aria-describedby="button-addon2" id="newName">
+const form = `<form id="studentForm"><div class="input-group mb-3"><input type="text" class="form-control student-input" placeholder="Luna Lovegood" aria-label="Recipient's username" aria-describedby="button-addon2" id="newName" required>
 <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Sort!</button></div></form>`
-renderToDom("#formid", form);
 
 const filterBtns = `<button type="button" class="btn btn-outline-dark" id="all">All</button><button type="button" class="btn btn-outline-danger" id="gryf">Gryffindor</button><button type="button" class="btn btn-outline-success" id="sly">Slytherin</button><button type="button" class="btn btn-outline-primary"id="rave">Ravenclaw</button><button type="button" class="btn btn-outline-info"id="huff">Hufflepuff</button>`
 
@@ -90,12 +89,6 @@ const cardsOnDomExpelled = (array) => {
  } 
 
 // *********  EVENT LISTENERS  *********  //
-//Event Listener Associated Function - House Randomizer 
-
-const houseRandom = () => {
-const houses = ["Gryffindor", "Slytherin", "Ravenclaw", "Hufflepuff"];
-return houses[Math.floor(Math.random() * 4)]; 
-}
 
 const eventListeners = () => {
 //FILTER BUTTONS 
@@ -129,6 +122,12 @@ cardsOnDomExpelled(expelledStudents);
 }
 })
 
+//Event Listener Associated Function - House Randomizer 
+const houseRandom = () => {
+  const houses = ["Gryffindor", "Slytherin", "Ravenclaw", "Hufflepuff"];
+  return houses[Math.floor(Math.random() * 4)]; 
+  }
+
 //Form Submission Buttons
 document.querySelector("#formid").addEventListener('submit', (e) => {
   e.preventDefault(); 
@@ -140,10 +139,10 @@ const newStudent = {
 students.push(newStudent);
 cardsOnDom(students); 
 })
-
 }
 
 // *********  FUNCTION TO START APPLICATION  *********  //
-renderToDom("#filterbtnid", filterBtns); 
+renderToDom("#filterbtnid", filterBtns);
+renderToDom("#formid", form); 
 cardsOnDom(students);
 eventListeners(); 
