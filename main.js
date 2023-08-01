@@ -142,7 +142,12 @@ cardsOnDom(students);
 }
 
 // *********  FUNCTION TO START APPLICATION  *********  //
-renderToDom("#filterbtnid", filterBtns);
-renderToDom("#formid", form); 
-cardsOnDom(students);
-eventListeners(); 
+const startApp = () => {
+  renderToDom("#filterbtnid", filterBtns);
+  renderToDom("#formid", form); 
+  cardsOnDom(students);
+  eventListeners(); 
+}
+
+// *********  Start App!  *********  //
+startApp(); 
