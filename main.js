@@ -50,7 +50,7 @@ const cardsOnDom = (array) => {
 array.forEach(student => {
 domString += `<div class="card mb-3" style="max-width: 500px;">
 <div class="row g-0">
-  <div class="col-md-4"style="max-width:150px;background-color:${student.house == "Ravenclaw" ? "purple" : student.house == "Slytherin" ? "green" : student.house == "Gryffindor" ? "red" : "blue"};">
+  <div class="col-md-4"style="max-width:150px;background-color:${student.house == "Ravenclaw" ? "#0b304a" : student.house == "Slytherin" ? "#25581f" : student.house == "Gryffindor" ? "#4d0506" : "#f3de0b"};">
   </div>
   <div class="col-md-8">
     <div class="card-body">
