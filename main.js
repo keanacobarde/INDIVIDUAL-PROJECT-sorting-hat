@@ -51,7 +51,7 @@ array.forEach(student => {
 domString += `<div class="card mb-3" style="max-width: 500px;">
 <div class="row g-0">
   <div class="col-md-4"style="max-width:150px">
-    <img style="height:150px;width:150px;"src="https://hexcolorpedia.com/wp-content/themes/bootscore-5-child/solid.php?c=80080a" alt="...">
+    <img style="height:100%;width:100%;"src="https://hexcolorpedia.com/wp-content/themes/bootscore-5-child/solid.php?c=80080a" alt="...">
   </div>
   <div class="col-md-8">
     <div class="card-body">
@@ -73,7 +73,7 @@ const cardsOnDomExpelled = (array) => {
  domString += `<div class="card mb-3" style="max-width: 500px;">
  <div class="row g-0">
    <div class="col-md-4"style="max-width:150px">
-     <img style="height:150px;width:150px;"src="https://hexcolorpedia.com/wp-content/themes/bootscore-5-child/solid.php?c=80080a" alt="...">
+     <img style="height:100%;width:100%;"src="https://hexcolorpedia.com/wp-content/themes/bootscore-5-child/solid.php?c=80080a" alt="...">
    </div>
    <div class="col-md-8">
      <div class="card-body">
