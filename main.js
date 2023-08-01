@@ -50,8 +50,7 @@ const cardsOnDom = (array) => {
 array.forEach(student => {
 domString += `<div class="card mb-3" style="max-width: 500px;">
 <div class="row g-0">
-  <div class="col-md-4"style="max-width:150px">
-    <img style="height:100%;width:100%;"src="https://hexcolorpedia.com/wp-content/themes/bootscore-5-child/solid.php?c=80080a" alt="...">
+  <div class="col-md-4"style="max-width:150px;background-color:${student.house == "Ravenclaw" ? "purple" : student.house == "Slytherin" ? "green" : student.house == "Gryffindor" ? "red" : "blue"};">
   </div>
   <div class="col-md-8">
     <div class="card-body">
