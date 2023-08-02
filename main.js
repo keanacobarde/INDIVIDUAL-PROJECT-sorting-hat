@@ -71,9 +71,8 @@ const cardsOnDomExpelled = (array) => {
  array.forEach(student => {
  domString += `<div class="card mb-3" style="max-width: 500px;">
  <div class="row g-0">
-   <div class="col-md-4"style="max-width:150px">
-     <img style="height:100%;width:100%;"src="https://hexcolorpedia.com/wp-content/themes/bootscore-5-child/solid.php?c=80080a" alt="...">
-   </div>
+ <div class="col-md-4"style="max-width:150px;background-color:${student.house == "Ravenclaw" ? "#0b304a" : student.house == "Slytherin" ? "#25581f" : student.house == "Gryffindor" ? "#4d0506" : "#f3de0b"};">
+ </div>
    <div class="col-md-8">
      <div class="card-body">
        <h5 class="card-title">${student.name}</h5>

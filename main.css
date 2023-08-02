@@ -3,9 +3,8 @@ body {
 }
 
 .logo_heading {
-  font-size: large;
+  height: 300px;
   text-align: center;
-  padding: 30px; 
 }
 
 .intro_text {
