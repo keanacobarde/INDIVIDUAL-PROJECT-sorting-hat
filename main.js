@@ -86,8 +86,8 @@ const cardsOnDomExpelled = (array) => {
  renderToDom("#expelledid", domString); 
  } 
 
-// *********  EVENT LISTENERS  *********  //
-
+ 
+ // *********  EVENT LISTENERS  *********  //
 const eventListeners = () => {
 //FILTER BUTTONS 
 document.querySelector("#filterbtnid").addEventListener('click', (e) => {
