@@ -71,12 +71,12 @@ const cardsOnDomExpelled = (array) => {
  array.forEach(student => {
  domString += `<div class="card mb-3" style="max-width: 500px;">
  <div class="row g-0">
- <div class="col-md-4"style="max-width:150px;background-color:${student.house == "Ravenclaw" ? "#0b304a" : student.house == "Slytherin" ? "#25581f" : student.house == "Gryffindor" ? "#4d0506" : "#f3de0b"};">
+ <div class="col-md-4"style="max-width:150px;background-color:gray;">
  </div>
    <div class="col-md-8">
      <div class="card-body">
        <h5 class="card-title">${student.name}</h5>
-       <p class="card-text">${student.house}</p>
+       <p class="card-text"style="color:red;">EXPELLED</p>
        <p class="card-text"><small class="text-body-secondary"><button type="button" class="btn btn-outline-danger" id='expel--${student.studentId}'>Expelled!</button></small></p>
      </div>
    </div>
