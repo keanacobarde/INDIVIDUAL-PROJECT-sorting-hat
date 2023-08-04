@@ -1,4 +1,5 @@
 # Sorting Hat - thesortinghatassignment.netlify.app
+Loom Link - https://www.loom.com/share/798810f7207c4f37b47d3740b2624d39?sid=dc0f3c1c-fbd5-489e-8d9d-7c0172478746
 
 ## Goals
 The goal of this project is to test your knowledge and to have a FUN time stretching yourself on your FIRST independent application that will become a part of your portfolio.
